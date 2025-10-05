@@ -1,4 +1,4 @@
 xcode-select --install
 
-clang++ hello.cpp -o hello
-./hello
+clang++ filename.cpp -o filename
+./filename
