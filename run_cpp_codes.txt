@@ -1,4 +1,13 @@
+
+steps involved in setting up and running in c++ in Mac
+
 xcode-select --install
 
 clang++ filename.cpp -o filename
 ./filename
+
+brew install gcc
+
+g++-14 main.cpp -o main
+
+./main
