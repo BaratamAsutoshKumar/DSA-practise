@@ -23,6 +23,25 @@ vector<int> permutation(vector<int>& nums)
     return ans;
 
 }
+
+int findValueafterOperations(vector<string>& operations)
+{
+    int num=0;
+    for(auto i:operations)
+    {
+        if(i=="++X" || i=="X++")
+        {
+            num++;
+        }
+        else
+        {
+            num--
+
+        }
+    }
+    return num;
+
+}
 int main()
 {
     int n;
