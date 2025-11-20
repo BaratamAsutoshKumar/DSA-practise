@@ -42,6 +42,43 @@ int findValueafterOperations(vector<string>& operations)
     return num;
 
 }
+
+
+
+vector<int> rearrange(vector<int>& nums)
+{
+    int n=nums.size()/2;
+    vector<int> ans;
+    for(int i=0;i<n;i++)
+    {
+        ans.push_back(nums[i]);
+        ans.push_back(nums[i+n]);
+    }
+    return ans 
+}
+
+void reverse_Array(int[] arr)
+{
+    int start=0, end=arr.size()-1;
+    while(start<end)
+    {
+        swap(arr[start],arr[end]);
+        start++;
+        end--;
+    }
+}
+
+// adding all possible permutation of a vector
+vector<vector<int>> permute(vector<int>& nums)
+{
+    sort(num.begin().num.end());
+    vector<vector<int>> ans;
+    do{
+        ans.push_back(nums);
+    }while(next_permuatation(nums.begin(), nums.end()));
+
+    return ans;
+}
 int main()
 {
     int n;
