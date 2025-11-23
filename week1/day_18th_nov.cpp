@@ -133,6 +133,27 @@ vector<int> findMinMax(vector<int>& nums)
     return result;
 }
 
+void selection_sort(vector<int>& nums)
+{
+    // selection sort algorithm O(n^2)
+    int min =-1;
+    for(int i=0;i<nums.,size();i++)
+    {
+        min =i;
+        for(int j=i;j<nums.size();j++)
+        {
+            if(arr[min]<arr[j])
+            {
+                min=j;
+            }
+        }
+        swap(arr[i],arr[min]);
+    }
+
+
+    // array will be sorted 
+}
+
 
 int main()
 {
