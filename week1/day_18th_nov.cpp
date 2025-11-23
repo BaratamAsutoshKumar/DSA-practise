@@ -79,6 +79,61 @@ vector<vector<int>> permute(vector<int>& nums)
 
     return ans;
 }
+
+map<int,int> countFrequency(vector<int>& nums)
+{
+    map<int,int> freq;
+    for(auto i: nunms)
+    {
+        freq[i]++;
+    }
+
+    return freq;
+}
+
+vector<int> findMinMax(vector<int>& nums)
+{
+    int minVal=INT_MAX;
+    int minFreq=INT_MAX;
+    int maxVal=INT_MIN;
+    int maxFreq= INT_MIN;
+    map<int,int> freq;
+    for(auto i: nums)
+    {
+        freq[i]++;
+        if(i<minVal)
+        {
+            minVal=i;
+        }
+        else if(i>maxVal)
+        {
+            maxVal=i;
+        }
+    }
+
+    for(auto i: freq)
+    {
+        if(i.second>maxFreq)
+        {
+            maxFred=i.second;
+        }
+        else if(i.second<minFreq)
+        {
+            minFreq=i.second;
+        }
+
+    }
+
+    vector<int> result;
+    result.push_back(minVal);
+    result.push_back(maxVal);
+    result.push_back(minFreq);
+    result.push_back(maxFreq);
+
+    return result;
+}
+
+
 int main()
 {
     int n;
