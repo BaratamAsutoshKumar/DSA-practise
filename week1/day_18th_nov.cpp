@@ -155,6 +155,24 @@ void selection_sort(vector<int>& nums)
 }
 
 
+// Bubble sort 
+
+void bubble_sort(vector<int>& nums)
+{
+    //bubble sort works based on Adjacent swapping O(n^2)
+    int n=nums.size();
+    for(int i=n-1;i>0;i--)
+    {
+        for(int j=0;j<i;j++)
+        {
+            if(nums[j]>nums[j+1])
+            {
+                swap(nums[j],nums[j+1]);
+            }
+        }
+    }
+}
+
 int main()
 {
     int n;
