@@ -173,6 +173,59 @@ void bubble_sort(vector<int>& nums)
     }
 }
 
+
+
+// finding smallest and second smallest ellemnt in the array in O(N)
+pair<int,int> firstsmall_secondsmall(vector<int>& nums)
+{
+    int first_min= INT_MAX,second_min=INT_MAX;
+    for(int i=0;i<nums.size();i++)
+    {
+        if(nums[i]<first_min)
+        {
+            second_min=first_min;
+            first_min=nums[i];
+        }
+        else if(nums[i]>second_min && nums[i]!=first_min)
+        {
+            second_min=nums[i];
+        }
+    }
+    pair<int,int> ans={first_min,second_min};
+    return ans;
+}
+
+// finding largeest and second largest element in the array in O(N)
+
+pair<int,int> findfirstmax_secondmax(vector<int>& nums)
+{
+    int first_max=INT_MIN, second_max=INT_MIN;
+
+    for(int i=0;i<nums.size();i++)
+    {
+        if(nums[i]>first_max)
+        {
+            second_max=first_max;
+            first_max=nums[i];
+        }
+        else if(nums[i]>second_max && nums[i]!=first_max)
+        {
+            second_max=nums[i];
+        }
+    }
+
+}
+
+// finding non-repeating value in the array 
+int singleNumber(vector<int>& nums)
+[
+    int ans=0;
+    for(auto i:nums)
+    {
+        ans=ans^i;
+    }
+    return ans;
+]
 int main()
 {
     int n;
