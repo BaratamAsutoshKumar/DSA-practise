@@ -173,7 +173,44 @@ void bubble_sort(vector<int>& nums)
     }
 }
 
+//optimised bubble sort (in case of sortred array keeping the best case time complexity O(n))
+// How to do is check the number of swaps in first iteration, if there are no swaps, then break the loop 
 
+
+void optimised_bubble_sport(vector<int>& nums)
+{
+    for(int i=nums.size()-1; i>=0;i--)
+    {
+        int num_swaps=0;
+        for(int j=0;j<i;j++)
+        {
+            if(nums[j]>nums[j+1])
+            {
+                swap(nums[j]mums[j+1]);
+                num_swaps++;
+            }
+        }
+        if(nums_swaps==0)
+        {
+            return;
+        }
+    }
+}
+
+//insertion sort
+
+void insertion_sort(vector<int>& nums)
+{
+    for(int i=0;i<nums.size();i++)
+    {
+        int j=i;
+        while(j>0 && nums[j]<nums[j-1])
+        {
+            swap(nums[j],nums[j-1]);
+            j--;
+        }
+    }
+}
 
 // finding smallest and second smallest ellemnt in the array in O(N)
 pair<int,int> firstsmall_secondsmall(vector<int>& nums)
@@ -196,6 +233,8 @@ pair<int,int> firstsmall_secondsmall(vector<int>& nums)
 }
 
 // finding largeest and second largest element in the array in O(N)
+
+
 
 pair<int,int> findfirstmax_secondmax(vector<int>& nums)
 {
@@ -226,6 +265,9 @@ int singleNumber(vector<int>& nums)
     }
     return ans;
 ]
+
+
+
 int main()
 {
     int n;
