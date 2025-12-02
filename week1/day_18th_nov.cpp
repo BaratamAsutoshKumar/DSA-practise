@@ -212,12 +212,55 @@ void insertion_sort(vector<int>& nums)
     }
 }
 
+void merge(vector<int>& nums,  int start, int mid, int end)
+{
+    int i=start, j = mid+1;
+    vector<int> temp;
+    while(i<=mid && j<= end)
+    {
+        if(nums[i]<nums[j])
+        {
+            temp.push_back(nums[i]);
+            i++;
+        }
+        else
+        {
+            temp.push_back(nums[j]);
+            j++;
+        }
+    }
+    while(i<=mid)
+    {
+        temp.push_back(nums[i]);
+        i++;
+    }
+    while(j<=end)
+    {
+        temp.push_back((nums[j]));
+        j++;
+    }
+    int k=start;
+    for(int i=0;i<temp.size();i++)
+    {
+        nums[k]=temp[i];
+    }
+}
 
+void mergeSortaux(vector<int>& nums, int start, int end)
+{
+    if(start>=end)
+    {
+        return;
+    }
+    int mid=(start+end)/2;
+    mergeSortaux(nums, start,mid);
+    megeSortaux(nums, mid+1, end);
+    merge(nums, start, mid, end);
+}
 //merge sort O(nlogn)
 void mergesort(vector<int>& nums)
 {
-
-
+    mergeSortaux(nums,0, nums.size()-1);
 }
 
 
