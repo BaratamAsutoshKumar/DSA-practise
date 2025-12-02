@@ -212,6 +212,42 @@ void insertion_sort(vector<int>& nums)
     }
 }
 
+
+//merge sort O(nlogn)
+void mergesort(vector<int>& nums)
+{
+
+
+}
+
+
+//avoiding repetition in array
+//Assume input array is sorted
+// lets first do with O(nlogn)+O(n) array 
+void avoid_reps(vector<int>& nums)
+{
+    sort(nums.begin(),nums.end());//this was not required as said input is sorted array
+
+
+}
+
+
+
+// move zeros to the end
+
+void move_zeros(vector<itn>& nums)
+{
+    int i=0, j=-1;
+    while(i<nums.size())
+    {
+        if(nums[i]!=0)
+        {
+            swap(nums[i],nums[j+1]);
+            j++;
+        }
+        i++;
+    }
+}
 // finding smallest and second smallest ellemnt in the array in O(N)
 pair<int,int> firstsmall_secondsmall(vector<int>& nums)
 {
